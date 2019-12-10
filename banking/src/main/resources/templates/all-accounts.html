@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>All Banks</title>
+</head>
+<body>
+   
+</BR>
+
+<div align="center">Please click on the Account Number, you would like to view transactions for: </div>
+</BR>
+<table align="center">
+    
+<thead>
+         <tr align="left">
+         <th width="20%">Account ID</th> <th width="40%">Account Number</th> <th width="20%">Type</th>
+         </tr>
+         </thead>
+         <tbody>
+            <tr th:each="account : ${accounts.results}">
+                <td th:text="${account.AccountId}">AccountId</td>
+                <td> <a th:href="@{'/fractal/banking/' + ${bankId} + '/accounts/' + ${account.AccountId} + '/transactions'}" th:text="${account.Account.Identification}" /></td>
+                 <td th:text="${account.Account.Name}">Type</td>
+            </tr>
+            </tbody>
+        </table>
+        
+    </tr>
+</table>
+</tr>
+		
+</body>
+</html>

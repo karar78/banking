@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>transactions</title>
+</head>
+<body>
+   
+</BR>
+</BR>
+</BR>
+<div align="center"><H1>Transaction Details</H1></div>
+</BR>
+<table align="center">
+    
+<thead>
+         <tr align="left">
+         <th width="20%">Transaction ID</th> <th width="40%">Description</th> <th width="20%">Date</th>
+         </tr>
+         </thead>
+         <tbody>
+            <tr th:each="transaction : ${transactions.results}">
+                <td th:text="${transaction.transactionId}">TransactionId</td>
+                 <td th:text="${transaction.description}">Description</td>
+                 <td th:text="${transaction.bookingDate}">Date</td>
+            </tr>
+            </tbody>
+        </table>
+        
+    </tr>
+</table>
+</tr>
+		
+</body>
+</html>

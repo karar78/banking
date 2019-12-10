@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>All Banks</title>
+</head>
+<body>
+
+	<div class="form-group blu-margin">
+		<select class="form-control" id="bankId"
+			onchange="location = this.value;">
+			<option selected value="">[Please select bank]</option>
+			<option th:each="bank : ${banks.results}" th:value="'/fractal/banking?bankId=' + ${bank.id}"
+				th:text="${bank.name}"></option>
+		</select>
+</body>
+</html>
